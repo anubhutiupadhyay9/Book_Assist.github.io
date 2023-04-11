@@ -1,9 +1,0 @@
-The popularity based model is working fine.
-But in the collaborative functioning model we are facing these problems:
-1)- if we are searching any course book then the model is not showing any recommendations.
-2)- Our books database (books.csv file) is too large and it has all kind of books (such as novels, story books ) along with the course books.
-3)- But the main aim of our website will be to give the best recommendations for the course books.
-4)-so we want our dataset to be filtered so that it can give the recommendations for books like Data structure, java etc. 
-
-The problem with our SDS is:
-1)-Data flow Diagram for 0 level, 1st level and 2nd level.
