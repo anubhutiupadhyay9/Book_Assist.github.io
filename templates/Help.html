@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Help
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/staticFiles/styleHelp.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="/index"><img src="/staticFiles/logo4.png" class="logo"></a>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('Help')}}">Help</a></li>
+                    <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2>How do I Login/Signup?</h2>
+                <p>Just use the Login/Signup button on the home page - all you need is<br>
+                    your email address and a strong password for Signup! Or,if you already<br>
+                    have an account then just enter you registered email address and<br> 
+                    password and click on Login.
+                </p>
+
+                <h2>How does Book_Assist work?</h2>
+                <p>Book_Assist shows top trending 50 books using "Popularity based filtering" <br>
+                    using the dataset with various ratings from thousands of users.<br>
+                    It produces recommendations based purely on "Collaborative filtering system" 
+                </p>
+
+                <h2>How should I use it?</h2>
+                <p>If you simply want a quick recommendation, you only need to enter the name of the book; <br>
+                    click on the Recommend Button on the Home page that will take you to the recommend page<br>
+                    On the search bar type the name and click on search button, It you will show you top 4 recommendations. 
+                </p>
+
+                <h2>I'm getting some weird results...</h2>
+                <p>No recommendation algorithm is perfect, but we're constantly tidying the database to improve things<br>
+                sometimes there are entries which are spelled wrongly from the original source database. The occasional <br>
+                wacky suggestion is usually down to the search book not appearing in many users' lists. But the results<br>
+                 improve all the time, so do come back and try again!
+                </p>
+
+                <h2>What if I can't find the book I'm looking for?</h2>
+                <p>Most of the time the database will identify your book by title straight away (you will see the results of close matches).<br>
+                    Now and again it may not come up with what you're looking for immediately. If so, try checking you've spelt them<br>
+                    correctly.If you're really stuck, get in touch with us via the links below and we'll try to help you out as soon as we can.
+                </p>               
+            </div>
+    </body>
+</html>

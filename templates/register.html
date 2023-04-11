@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/staticFiles/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src=""></script>
+    
+</head>
+
+<body>
+    
+    <div class="sub-header">
+        <div class="navbar">
+            <a href="/"><img src="/staticFiles/logo4.png" class="logo"></a>
+            <ul>
+                <li><a href="/HelpBefore">Help</a></li>
+                <li><a href="/AboutUsBefore">About Us</a></li>               
+                
+            </ul>
+        </div>
+    </div>
+  
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <span>Register</span>
+                        {% block content %}
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for msg in messages %}
+                                        {% if(msg == "Account created successfully")%}
+                                            <p class="msggreen">{{msg}}</p> 
+                                        {% else %}   
+                                            <p class="msgcolor">{{msg}}</p>
+                                        {% endif %}                                     
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                            <form class="form" method="post" action="/add_user" id="RegForm">
+                                <input type="text"class="form-control" name="uname" placeholder="UserName" id="uname">
+                                <input type="email"class="form-control" name="uemail" placeholder="Email" id="uemail">
+                                <input type="password"class="form-control" name="upassword" placeholder="Password" id="upassword">
+                                <button type="submit" class="btn2" value="Register">Register</button>
+                                <p>Already have an account? <br><a href="/login">Login Here</a></p>
+                            </form>
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
